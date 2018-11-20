@@ -1,0 +1,48 @@
+﻿@model Exercito.Models.Login
+
+@{
+    ViewBag.Title = "LoginAlistamento";
+}
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<div class="col-md-6" style="margin-top:4%">
+    <h2>Entrar</h2>
+
+
+    <label>Usuário:</label>
+    <input type="text" class="form-control" id="Login" /><br />
+    <label>Senha:</label>
+    <input type="password" class="form-control" id="SenhaLogin"
+           maxlength="8" required
+           placeholder="Máximo 8 caracteres" /><br />
+    <button class="btn btn-primary" id="entrar">Entrar</button>
+
+
+    <h2>Cadastrar</h2>
+
+
+    <label>Usuário:</label>
+    <input type="text" class="form-control" id="Usuario" /><br />
+    <label>Login:</label>
+    <input type="text" class="form-control" id="LoginCadastro" /><br />
+    <label>Senha:</label>
+    <input type="password" class="form-control" id="SenhaCadastro"
+           maxlength="8" required
+           placeholder="Máximo 8 caracteres" /><br />
+   
+    <div class="form-group">
+        <label>Administrador/Usuário:</label>
+         <select class="form-control" id="Funcao">
+             <option value="1">Usuário</option>
+             <option value="2">Administrador</option>
+             
+         </select>
+     </div>
+
+    <button class="btn btn-success" id="salvar">Salvar</button>
+</div>
+<div class="col-md-6" style="margin-top:8%">
+    <img src="https://seeklogo.com/images/B/brasao-da-republica-do-brasil-logo-F668D19105-seeklogo.com.png" height="500"/>
+</div>
+
+    <script src="~/Scripts/LoginAlistamento.js"></script>

@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Loading";
+}
+
+
+<div class="col-md-6" style="margin-top:4%">
+    
+<h2>Enviar PDF:</h2>
+    @using (Html.BeginForm("SalvarArquivo", "Arquivo", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+
+<input name="Id" value="@ViewBag.Id" hidden />
+<input type="file" name="arquivo" accept=".pdf"/><br />
+
+    <button type="submit" class="btn btn-primary" >Enviar</button>
+    }
+</div>
+<div class="col-md-6" style="margin-top:8%">
+    <img src="https://seeklogo.com/images/B/brasao-da-republica-do-brasil-logo-F668D19105-seeklogo.com.png" height="500" />
+</div>
+    
+
+
+    
+
+
+
+
+

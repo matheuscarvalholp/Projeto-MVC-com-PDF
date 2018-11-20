@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Meu Aplicativo ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" style="background-color:#78866b">
+        <div class="col-md-1">
+            <img src="https://seeklogo.com/images/E/Exercito_Brasileiro-logo-F9416F8BE5-seeklogo.com.png" height="100">
+        </div>
+        <div class="col-md-9" style="color:#fff">
+            <center>
+                <h1 style="font-size:400%">   Exército Brasileiro</h1>
+            </center>
+        </div>
+        <div class="col-md-1" style="margin-left:6.5%">
+            <img src="https://imagepng.org/wp-content/uploads/2017/04/bandeira-do-brasil.png" height="100">
+        </div>
+        <div class="container">
+            <div class="navbar-header">
+
+
+
+            </div>
+
+        </div>
+    </div>
+    <div style="background-color:#ac7c42">
+        @RenderBody()
+        <hr />
+    
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>
+

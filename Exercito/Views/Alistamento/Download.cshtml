@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Exercito.Models.Login>
+@{
+    ViewBag.Title = "Download";
+}
+
+<style>
+    table {
+        border-collapse: separate;
+        border-spacing: 0 8px;
+        margin-top: -8px;
+    }
+    td {
+        border-left-width: 0;
+        min-width: 120px;
+        height: 30px;
+    }
+</style>
+<div class="col-md-6" style="margin-top:4%">
+
+    <h2 style="color:white">Página de avaliação:</h2>
+    <table style="width:100%; background-color:cornsilk">
+        <tr>
+            <th>Usuario</th>
+            <th>Login</th>
+            <th>Status</th>
+        </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Usuario</td>
+            
+            <td>@item.Loginn</td>
+            
+            <td>
+                @item.Status
+            </td>
+            
+            <td style="height:2px"> 
+                @Html.ActionLink("Download", "MostrarPdf", "Arquivo", new { id = item.Id, }, new { @class = "btn btn-primary" })
+                @Html.ActionLink("Editar","Atualizar", "Arquivo", new { id = item.Id}, new { @class = "btn btn-success" })
+            </td>
+            
+       
+        </tr>
+    }
+    </table>
+    <input name="Id" value="@ViewBag.Id" hidden />
+</div>
+<div class="col-md-6" style="margin-top:8%">
+    <img src="https://seeklogo.com/images/B/brasao-da-republica-do-brasil-logo-F668D19105-seeklogo.com.png" height="500" />
+</div>
+      
+   
+
+        
+
+
+
+
+
